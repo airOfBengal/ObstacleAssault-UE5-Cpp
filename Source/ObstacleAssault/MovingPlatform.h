@@ -27,5 +27,6 @@ public:
 	float moveSpeed = 10.0f;
 
 	UPROPERTY(EditAnywhere)
-	FVector initPosition = FVector(2.5f, 0.0f, 3.0f);
+	FVector initPosition = FVector(-290.0f, -490.0f, 300.0f);
+	
 };

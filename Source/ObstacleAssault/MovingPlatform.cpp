@@ -17,6 +17,8 @@ void AMovingPlatform::BeginPlay()
 	Super::BeginPlay();
 	UE_LOG(LogTemp, Display, TEXT("moveSpeed: %.3f"), moveSpeed);
 	UE_LOG(LogTemp, Display, TEXT("initPosition: %.2f, %.2f, %.2f"), initPosition.X, initPosition.Y, initPosition.Z);
+
+	SetActorLocation(initPosition);
 }
 
 // Called every frame

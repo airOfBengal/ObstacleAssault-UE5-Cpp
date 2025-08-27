@@ -15,10 +15,6 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Display, TEXT("moveSpeed: %.3f"), moveSpeed);
-	UE_LOG(LogTemp, Display, TEXT("initPosition: %.2f, %.2f, %.2f"), initPosition.X, initPosition.Y, initPosition.Z);
-
-	SetActorLocation(initPosition);
 }
 
 // Called every frame
@@ -26,5 +22,8 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	FVector currentLocation = GetActorLocation();
+	currentLocation.X += 200 * DeltaTime;
+	SetActorLocation(currentLocation);
 }
 

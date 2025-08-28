@@ -34,4 +34,14 @@ public:
 	
 	void MovePlatform(float DeltaTime);
 	void RotatePlatform(float DeltaTime);
+
+	FVector StartLocation;
+
+	UPROPERTY(VisibleAnywhere)
+	float DistanceMoved;
+
+	UPROPERTY(EditAnywhere)
+	float MoveDistance = 100.0f;
+
+	float GetDistanceMoved();
 };

@@ -28,5 +28,10 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	FVector initPosition = FVector(-290.0f, -490.0f, 300.0f);
+
+	UPROPERTY(EditAnywhere)
+	FVector PlatformVelocity = FVector(0.0f, 0.0f, 0.0f);
 	
+	void MovePlatform(float DeltaTime);
+	void RotatePlatform(float DeltaTime);
 };
